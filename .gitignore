@@ -1,0 +1,25 @@
+docker_enviroment/*.tar
+whu_system/yudao-cloud-test/nacos.tar.gz
+
+# Local secrets, generated data and private source documents
+.env
+.env.*
+!.env.example
+**/http-client.env.json
+**/http-client.private.env.json
+**/application-private.y*ml
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.jks
+**/.DS_Store
+**/target/
+**/logs/
+**/node_modules/
+whu_system/downhtml/
+系统环境与运行方式.pdf
+*.sql.gz
+*.sql.zip
+*.dump
+*.bak

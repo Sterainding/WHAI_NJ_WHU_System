@@ -1,0 +1,9 @@
+<select id="selectTotalSize" resultType="java.lang.Long">
+    SELECT SUM(DATA_LENGTH + INDEX_LENGTH) AS total_size
+    FROM information_schema.TABLES
+    WHERE TABLE_SCHEMA = DATABASE()
+    AND TABLE_NAME IN
+    <foreach item="name" collection="tableNames" open="(" separator="," close=")">
+        #{name}
+    </foreach>
+</select>
